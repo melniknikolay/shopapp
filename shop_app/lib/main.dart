@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         builder: (ctx, auth, _) => MaterialApp(
           title: 'MyShop',
           theme: ThemeData(
-              primaryColor: Colors.purple,
+              primarySwatch: Colors.purple,
               accentColor: Colors.deepOrange,
               fontFamily: 'Lato',
               pageTransitionsTheme: PageTransitionsTheme(builders: {
@@ -62,6 +62,7 @@ class MyApp extends StatelessWidget {
                           ? SplashScreen()
                           : AuthScreen(),
                 ),
+          debugShowCheckedModeBanner: false,
           routes: {
             ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
             CartScreen.routeName: (ctx) => CartScreen(),

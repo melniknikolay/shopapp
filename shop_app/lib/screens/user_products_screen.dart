@@ -5,7 +5,6 @@ import 'package:shop_app/widgets/app_drawer.dart';
 import 'package:shop_app/widgets/user_product_item.dart';
 
 import '../providers/products.dart';
-import '../widgets/product_item.dart';
 
 class UserProductsScreen extends StatelessWidget {
   static const routeName = 'user-product';
@@ -17,7 +16,6 @@ class UserProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final productsData = Provider.of<Products>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text('Your Products'),

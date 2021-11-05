@@ -13,10 +13,8 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
-    // final transformConfig = Matrix4.rotationZ(-8 * pi / 180);
-    // transformConfig.translate(-10.0);
+
     return Scaffold(
-      // resizeToAvoidBottomInset: false,
       body: Stack(
         children: <Widget>[
           Container(
@@ -47,7 +45,6 @@ class AuthScreen extends StatelessWidget {
                           EdgeInsets.symmetric(vertical: 8.0, horizontal: 94.0),
                       transform: Matrix4.rotationZ(-8 * pi / 180)
                         ..translate(-10.0),
-                      // ..translate(-10.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.deepOrange.shade900,
@@ -62,7 +59,8 @@ class AuthScreen extends StatelessWidget {
                       child: Text(
                         'MyShop',
                         style: TextStyle(
-                          color: Theme.of(context).accentTextTheme.title.color,
+                          color:
+                              Theme.of(context).accentTextTheme.bodyText1.color,
                           fontSize: 50,
                           fontFamily: 'Anton',
                           fontWeight: FontWeight.normal,
@@ -240,7 +238,6 @@ class _AuthCardState extends State<AuthCard>
                     if (value.isEmpty || !value.contains('@')) {
                       return 'Invalid email!';
                     }
-                    return null;
                     return null;
                   },
                   onSaved: (value) {
